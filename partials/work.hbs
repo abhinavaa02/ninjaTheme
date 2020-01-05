@@ -1,0 +1,14 @@
+<article class="post-card {{post_class}}">
+    {{#if feature_image}}
+        <a class="post-card-image-link" href="{{url}}">
+            <div class="post-card-image" style="background-image: url({{feature_image}})"></div>
+        </a>
+    {{/if}}
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="{{url}}">
+            <header class="post-card-header">
+                <h3 style="color: black;" class="post-card-title">{{title}}</h3>
+            </header>
+        </a>
+    </div>
+</article>
