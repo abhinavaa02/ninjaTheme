@@ -1,0 +1,32 @@
+<div>
+    <aside class="read-more-wrap">
+        <div class="read-more inner">
+            {{#get "posts" filter="featured:true" include="authors" limit="1" as |more_posts| }}
+                {{#if more_posts}}
+                    {{#foreach more_posts}}
+                        {{> "featured-post-card"}}
+                    {{/foreach}}
+                {{/if}}
+            {{/get}}
+        </div>
+    </aside>
+{{!-- //Featured post Section --}}
+
+{{!-- Insights page other posts Section --}}
+    <aside class="read-more-wrap">
+        <div class="read-more inner">
+            <div class="row">
+                {{#get "posts" include="authors" filter="featured:false" limit="8" as |more_posts| }}
+                    {{#if more_posts}}
+                        {{#foreach more_posts}}
+                            <div class="col-md-6  insights-post-card-margin">
+                                {{> "insights-post-card"}}
+                            </div>
+                        {{/foreach}}
+                    {{/if}}
+                {{/get}}
+            </div>
+        </div>
+    </aside>
+
+</div>
