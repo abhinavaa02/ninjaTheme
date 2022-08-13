@@ -1,8 +1,8 @@
 {
-    "name": "ninjaTheme",
+    "name": "ninjatheme",
     "description": "A custom ghost theme built with reusuability, minimalism & beauty in mind.",
     "demo": "https://www.ninjamonk.in",
-    "version": "2.4.2",
+    "version": "3.4.2",
     "engines": {
         "ghost": ">=1.2.0"
     },
@@ -14,6 +14,9 @@
     "scripts": {
         "dev": "gulp",
         "zip": "gulp zip"
+    },
+    "overrides": {
+        "graceful-fs": "^4.2.10"
     },
     "author": {
         "name": "Abhijeet Goel",
@@ -29,8 +32,7 @@
         ]
     },
     "keywords": [
-        "ghost",
-        "theme"
+        "ghost-theme"
     ],
     "repository": {
         "type": "git",
@@ -41,7 +43,7 @@
     "devDependencies": {
         "autoprefixer": "6.3.6",
         "cssnano": "3.7.1",
-        "gulp": "3.9.1",
+        "gulp": "^4.0.2",
         "gulp-livereload": "3.8.1",
         "gulp-postcss": "6.1.1",
         "gulp-sourcemaps": "1.6.0",
