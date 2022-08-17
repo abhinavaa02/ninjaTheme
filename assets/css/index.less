@@ -1,37 +1,39 @@
 @import "var.less";
 
 //  Index:
-// 1. Body 2.Navbar 3.Home-page 4.Post-card 5.utilities
+// 1.utilities 2. Body 3.Navbar 4.Home-page 5.Post-cards 6.Footer
 
-// 1.Body
+//1.Utilities
+.d-flex {
+    display: flex !important;
+}
+
+// 2.Body
 body {
     background: radial-gradient(circle, #fffdd0 0, #fff 50%, #fffdd0 100%);
 }
-// 2. Navbar
+// 3. Navbar
 .navbar-logo {
     height: 60px !important;
     width: auto;
 }
-// 3. Home-page
+// 4. Home-page
 img#poster {
     height: 450px;
     filter: grayscale(70%);
 }.home-startup-intro {
-    display: flex!important;
+    .d-flex;
     flex-direction: column;
     justify-content: center;
 }section#ideas {
     margin: 0;
-    margin-top: 0;
-    background-color: #000;
     border-radius: 5px;
 }
-// 4. Post-card
+// 5. Post-cards
 .post-card {
     overflow: hidden;
-    margin: 0 20px 40px;
+    margin: 0 20px 20px;
     height: 400px;
-    width: 30%;
     background: hsla(0, 0%, 100%, .1) 50%;
     background-size: cover;
     border-radius: 10px;
@@ -51,4 +53,6 @@ img#poster {
     }
 }.post-card-read-more-btn {
     height: 30px;
+}.work-card-title-margin {
+    margin-top: -15px;
 }

@@ -16,7 +16,7 @@
             </div>
           </div>
         </section>
-        <section id="ideas" class="container-fluid">
+        <section id="ideas" class="container-fluid bg-dark">
           <div class="row">
             <div class="col-md-10">
               <h2 style="margin-left: 20px;" class="mt-3 text-white">Ideas & Insights </h2>
@@ -28,10 +28,12 @@
             </div>
           </div>
 
-          <div class="py-2 mt-2 d-flex">
+          <div class="row py-2 mt-2">
             {{#get "posts" filter="tags:article" limit="3" as |filtered_posts|}}
               {{#foreach filtered_posts}}
+                <div class="col-12 col-md-4">
                   {{> "post-card"}}
+                </div>
               {{/foreach}}
             {{/get}}
             {{#next_post}}
@@ -53,13 +55,12 @@
               <span style="display: block; margin-top: 20px; text-align: right; margin-right: 20px;"><a href="/casestudies" class="btn btn-dark btn-lg" role="button">View All</a></span>
             </div>
           </div>
-          <div class="post-feed">
-            <!--{{#foreach posts}}
-                {{> "post-card"}}
-            {{/foreach}}-->
-            {{#get "posts" filter="tags:clients" limit="5" as |filtered_posts|}}
+          <div class="row mt-3">
+            {{#get "posts" filter="tags:clients" limit="6" as |filtered_posts|}}
               {{#foreach filtered_posts}}
+              <div class="col-12 col-md-4">
                   {{> "work"}}
+              </div>
               {{/foreach}}
             {{/get}}
           </div>
