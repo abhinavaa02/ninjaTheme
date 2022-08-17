@@ -41,8 +41,8 @@
     "bugs": "https://github.com/TryGhost/Casper/issues",
     "contributors": "https://github.com/TryGhost/Casper/graphs/contributors",
     "devDependencies": {
+        "@types/autoprefixer": "^10.2.0",
         "autoprefixer": "6.3.6",
-        "beeper": "^3.0.0",
         "browser-sync": "^2.27.10",
         "cssnano": "3.7.1",
         "gscan": "^4.34.0",
@@ -59,6 +59,7 @@
         "gulp-watch": "4.3.8",
         "gulp-zip": "4.0.0",
         "postcss-color-function": "2.0.1",
+        "postcss-color-mod-function": "^3.0.3",
         "postcss-custom-properties": "5.0.1",
         "postcss-easy-import": "1.0.1",
         "postcss-import": "^14.1.0",
@@ -66,5 +67,9 @@
     },
     "config": {
         "posts_per_page": 25
+    },
+    "dependencies": {
+        "less": "^4.1.3",
+        "node-fetch": "^2.6.1"
     }
 }
