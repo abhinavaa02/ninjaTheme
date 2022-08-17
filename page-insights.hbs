@@ -1,32 +1,41 @@
-<div>
-    <aside class="read-more-wrap">
-        <div class="read-more inner">
-            {{#get "posts" filter="featured:true" include="authors" limit="1" as |more_posts| }}
-                {{#if more_posts}}
-                    {{#foreach more_posts}}
-                        {{> "featured-post-card"}}
-                    {{/foreach}}
-                {{/if}}
-            {{/get}}
-        </div>
-    </aside>
-{{!-- //Featured post Section --}}
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
-{{!-- Insights page other posts Section --}}
-    <aside class="read-more-wrap">
-        <div class="read-more inner">
-            <div class="row">
-                {{#get "posts" include="authors" filter="featured:false" limit="8" as |more_posts| }}
+{{!-- Insights page Featured post Section --}}
+{{!-- This Showes the latest featured post --}}
+<div style="margin-top:50px"></div>
+    <div class="mx-4">
+        <aside class="read-more-wrap mb-5">
+            <div class="inner">
+                {{#get "posts" filter="featured:true" include="authors" limit="1" as |more_posts| }}
+                  {{featured}}
                     {{#if more_posts}}
                         {{#foreach more_posts}}
-                            <div class="col-md-6  insights-post-card-margin">
-                                {{> "insights-post-card"}}
-                            </div>
+                            {{> "featured-post-card"}}
                         {{/foreach}}
                     {{/if}}
                 {{/get}}
             </div>
-        </div>
-    </aside>
+        </aside>
+{{!-- //Featured post Section --}}
+<hr>
+{{!-- Insights page other posts Section --}}
+        <aside class="read-more-wrap">
+            <div class="inner">
+                <div class="row">
+                    {{#get "posts" include="authors" filter="featured:false" limit="9" as |more_posts| }}
 
-</div>
+                        {{#if more_posts}}
+                            {{#foreach more_posts}}
+                                <div class="col-lg-4 col-md-6 offset-md-0 col-12 mt-2 mb-3">
+                                    {{> "insights-post-card"}}
+                                </div>
+                            {{/foreach}}
+                            {{pagination}}
+                        {{/if}}
+                    {{/get}}
+                </div>
+            </div>
+        </aside>
+    </div>
+{{!-- //Insights page other posts Section --}}

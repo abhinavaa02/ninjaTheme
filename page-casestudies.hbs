@@ -19,9 +19,11 @@ into the {body} of the default.hbs template --}}
             </figure>
             {{/if}}
 
+            {{#if content}}
             <section class="post-full-content">
                 {{content}}
             </section>
+            {{/if}}
 
         </article>
 
@@ -30,7 +32,7 @@ into the {body} of the default.hbs template --}}
 
 {{/post}}
 
-{{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related_posts|}}
+{{#get "posts" filter="tags:clients" limit="3" as |related_posts|}}
   {{#foreach related_posts}}
       {{> "post-card"}}
   {{/foreach}}

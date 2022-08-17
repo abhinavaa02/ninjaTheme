@@ -1,69 +1,35 @@
 {{!-- This is a partial file used to generate a post "card"
 which templates loop over to generate a list of posts. --}}
 
-<a class="featured-post-card-content-link" href="{{url}}">
-<article class="featured-post-card {{post_class}} {{#is "home"}}{{#if feature_image}}{{#has index="0"}}post-card-large{{/has}}{{/if}}{{/is}}">
-
-
-{{!-- Image section --}}
-    {{#if feature_image}}
-    <a class="featured-post-card-image-link" href="{{url}}">
-        {{!-- This is a responsive image, it loads different sizes depending on device
-        https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
-        <img class="featured-post-card-image"
-            srcset="{{img_url feature_image size="s"}} 300w,
-                    {{img_url feature_image size="m"}} 600w,
-                    {{img_url feature_image size="l"}} 1000w,
-                    {{img_url feature_image size="xl"}} 2000w"
-            sizes="(max-width: 1000px) 400px, 800px"
-            src="{{img_url feature_image size="m"}}"
-            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-            loading="lazy"
-        />
-    </a>
-    {{/if}}
-{{!-- //Image section --}}
-
-
-
-    {{!-- Content Section --}}
-    <div class="featured-post-card-content">
-
+  <article class="{{post_class}} mb-lg-5">
+    <div class="row">
+      <div class="col-lg-7 col-12 bg-transparent rounded-3">
+        {{#if feature_image}}
+          <img class="post_feature_image card-img-top h-auto w-100 post-image-border shadow"
+              srcset="{{img_url feature_image size="s"}} 300w,
+                      {{img_url feature_image size="m"}} 600w,
+                      {{img_url feature_image size="l"}} 1000w,
+                      {{img_url feature_image size="xl"}} 2000w"
+              sizes="(max-width: 1000px) 400px, 800px"
+              src="{{img_url feature_image size="l"}}"
+              alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+              loading="lazy"
+          />
+        {{/if}}
+      </div>
+      <div class="col-lg-5 col-12 card-body p-4 p-lg-3 pb-1">
+        <div>
+          <a class="post-card-content-link text-black text-decoration-none pt-0" style="text-align: justify;" href="{{url}}#/portal">
             <header class="post-card-header">
-                {{#if primary_tag}}
-                    {{#primary_tag}}
-                    <div class="post-card-primary-tag">{{name}}</div>
-                    {{/primary_tag}}
-                {{/if}}
-                <h2 class="featured-post-card-title">{{title}}</h2>
+              {{#if primary_tag}}
+                  {{#primary_tag}}
+                  <div class="post-card-primary-tag">{{name}}</div>
+                  {{/primary_tag}}
+              {{/if}}
+              <div class="card-title text-start h2">
+                <strong>{{title}}</strong>
+              </div>
             </header>
-            <section class="post-card-excerpt">
-                <p class="featured-post-card-excerpt-p">{{excerpt}}</p><a href="{{url}}" class="post-card-read-more"> Read More..</a>
-            </section>
-
-        <footer class="post-card-meta">
-            <ul class="author-list">
-                {{#foreach authors}}
-                <li class="author-list-item">
-                    {{#if profile_image}}
-                    <a href="{{url}}" class="static-avatar">
-                        <img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
-                    </a>
-                    {{else}}
-                    <a href="{{url}}" class="static-avatar author-profile-image">{{> "icons/avatar"}}</a>
-                    {{/if}}
-                </li>
-                {{/foreach}}
-            </ul>
-            <div class="post-card-byline-content">
-                <span>{{#has author="count:>2"}}Multiple authors{{else}}{{authors}}{{/has}}</span>
-                <span class="post-card-byline-date"><time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
-
-            </div>
-        </footer>
-
-    </div>
-    {{!-- //Content Section --}}
-
-</article>
-</a>
+            <p class="card-text post-card-description">{{excerpt}}</p>
+            <i class="text-danger"><b>Read More &nbsp;&nbsp;  <span class="fa-solid fa-arrow-right-long" /></b></a></b></i>
+          </a>

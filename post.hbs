@@ -11,15 +11,15 @@ into the {body} of the default.hbs template --}}
 
         <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
 
-            <header class="post-full-header">
-                <h1 class="post-full-title">{{title}}</h1>
-                {{> "byline-single"}}
-                <div class="sharethis-inline-share-buttons"></div>
+            <header class="post-full-header row">
+                <h1 class="post-full-title text-center col-12">{{title}}</h1>
+                <div class="col-12 col-md-6">{{> "byline-single"}}</div>
+                <div class="sharethis-inline-share-buttons col-12 col-md-6 m-0 mt-4"></div>
             </header>
 
             <section class="post-full-content">
                 {{#if feature_image}}
-                  <figure class="post-full-image" style="background-image: url({{feature_image}}); height: 300px; width: 100%;">
+                  <figure class="post-full-image m-0" style="background-image: url({{feature_image}}); height: 300px; width: 100%;">
                   </figure>
                 {{/if}}
                 <div class="post-content">
