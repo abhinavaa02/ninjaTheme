@@ -19,14 +19,16 @@
         <section id="ideas" class="container-fluid">
           <div class="row">
             <div class="col-md-10">
-              <h2 style="margin-left: 20px;">Ideas & Insights </h2>
+              <h2 style="margin-left: 20px;" class="mt-3 text-white">Ideas & Insights </h2>
             </div>
             <div class="col-md-2" align="center">
-              <span style="display: block; margin-top: 20px; text-align: right; margin-right: 20px;"><a href="/insights" class="btn btn-light btn-lg" role="button">View All</a></span>
+              <span style="display: block; margin-top: 20px; text-align: right; margin-right: 20px;">
+                <a href="/insights" class="btn btn-light btn-lg" target="_blank">View All</a>
+              </span>
             </div>
           </div>
 
-          <div class="post-feed">
+          <div class="py-2 mt-2 d-flex">
             {{#get "posts" filter="tags:article" limit="3" as |filtered_posts|}}
               {{#foreach filtered_posts}}
                   {{> "post-card"}}
@@ -42,10 +44,10 @@
             {{/prev_post}}
           </div>
         </section>
-        <section id="work" class="container-fluid">
+        <section id="work" class="container-fluid mt-5">
           <div class="row">
             <div class="col-md-10">
-              <h1 style="margin-left: 20px;">Featured Work</h1>
+              <h1 class="ms-4"><strong>Featured Work</strong></h1>
             </div>
             <div class="col-md-2" align="center">
               <span style="display: block; margin-top: 20px; text-align: right; margin-right: 20px;"><a href="/casestudies" class="btn btn-dark btn-lg" role="button">View All</a></span>

@@ -7,7 +7,7 @@ which templates loop over to generate a list of posts. --}}
 
 <article class="bg-transparent">
     {{#if feature_image}}
-      <img class="post_feature_image card-img-top insights-post-card-image post-image-border shadow"
+      <img class="post_feature_image card-img-top post-card-image shadow"
           srcset="{{img_url feature_image size="s"}} 300w,
                   {{img_url feature_image size="m"}} 600w,
                   {{img_url feature_image size="l"}} 1000w,
@@ -32,3 +32,25 @@ which templates loop over to generate a list of posts. --}}
         </a>
     </div>
 </article>
+
+
+
+
+
+{{!-- <article class="post-card {{post_class}}{{#unless feature_image}} no-image{{/unless}}">
+    {{#if feature_image}}
+        <a class="post-card-image-link" href="{{url}}">
+            <div class="post-card-image" style="background-image: url({{feature_image}})"></div>
+        </a>
+    {{/if}}
+    <div class="post-card-content">
+        <a class="post-card-content-link" href="{{url}}">
+            <header class="post-card-header">
+                <h3 class="post-card-title">{{title}}</h3>
+                <button class="btn btn-outline-light" role="button"
+                  tabIndex="-1" aria-disabled="false">Read More</button>
+            </header>
+        </a>
+    </div>
+</article> --}}
+
