@@ -82,12 +82,10 @@ function css(done){
         '**',
         '!node_modules', '!node_modules/**',
         '!dist', '!dist/**',
-        '!yarn-error.log',
         '!yarn.lock',
         '!gulpfile.js',
         '!assets/css/**',
         '!assets/js/**',
-        '!assets/plugins/**'
     ])
     .pipe(zip(filename))
     .pipe(dest('dist/'))

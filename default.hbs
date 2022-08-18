@@ -33,20 +33,22 @@
         {{{body}}}
 
         {{!-- The footer at the very bottom of the screen --}}
-        <footer class="site-footer outer bg-dark" id="footer">
-              <div class="site-footer-content inner">
-                  <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
-                  <nav class="site-footer-nav">
-                      {{#if @blog.facebook}}<a href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>{{/if}}
-                      {{#if @blog.twitter}}<a href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>{{/if}}
+        <footer class="site-footer outer bg-dark pt-2 pb-4 ps-2" id="footer">
+              <div class="site-footer-content inner d-flex">
+                  <section class="copyright text-light fs-24px">
+                    <a href="{{@site.url}}" class="custom-text-decoration text-light">{{@site.title}}</a><small> &copy; {{date format="YYYY"}}</small>
+                </section>
+                  <nav class="site-footer-nav footer-text-color me-3 mt-2 ms-auto justify-content-end">
+                      <a href="#" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
+                      <a href="#" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
                       <a href="https://www.github.com/aNinjaMonk/"><i class="fab fa-github"></i></a>
                       <a href="mailto:abhi@bahikhata.co"><i class="fas fa-envelope-open-text"></i></a>
-                      <a href="tel:+917456883325"><i class="fas fa-phone"></i></a>
-                      {{#if @labs.subscribers}}
+                      <a href="tel:+917456883325"><small><i class="fas fa-phone"></i></small></a>
+                      {{!-- {{#if @labs.subscribers}}
                           <a class="subscribe-button" href="#subscribe">RSS</a>
                       {{else}}
                           <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
-                      {{/if}}
+                      {{/if}} --}}
                   </nav>
               </div>
         </footer>

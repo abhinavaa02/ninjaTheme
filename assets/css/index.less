@@ -6,6 +6,17 @@
 //1.Utilities
 .d-flex {
     display: flex !important;
+}.custom-text-decoration, .custom-text-decoration a {
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+        text-decoration-color: @dark;
+    }
+}.fs-24px {
+    font-size: 24px;
+}.mx-2 {
+    margin-right: .5rem!important;
+    margin-left: .5rem!important;
 }
 
 // 2.Body
@@ -55,4 +66,15 @@ img#poster {
     height: 30px;
 }.work-card-title-margin {
     margin-top: -15px;
+}
+// 6.Footer
+.footer-text-color, .footer-text-color *, .footer-text-color * *{
+    color: @footer-color;
+}.rss-button svg {
+    margin-bottom: 15px;
+    height: 2.7rem;
+    fill: hsla(0,0%,100%,.7);
+}.site-footer-nav a i {
+    font-size: 2rem;
+    .mx-2;
 }

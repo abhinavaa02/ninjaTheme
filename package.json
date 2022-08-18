@@ -2,7 +2,7 @@
     "name": "ninjatheme",
     "description": "A custom ghost theme built with reusuability, minimalism & beauty in mind.",
     "demo": "https://www.ninjamonk.in",
-    "version": "3.4.2",
+    "version": "5.2.0",
     "engines": {
         "ghost": ">=1.2.0"
     },
