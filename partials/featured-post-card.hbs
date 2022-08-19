@@ -19,7 +19,7 @@ which templates loop over to generate a list of posts. --}}
       </div>
       <div class="col-lg-5 col-12 card-body p-4 p-lg-3 pb-1">
         <div>
-          <a class="post-card-content-link text-black text-decoration-none pt-0" style="text-align: justify;" href="{{url}}#/portal">
+          <a class="post-card-content-link text-black text-decoration-none pt-0" style="text-align: justify;" href="{{url}}">
             <header class="post-card-header">
               {{#if primary_tag}}
                   {{#primary_tag}}
@@ -31,7 +31,7 @@ which templates loop over to generate a list of posts. --}}
               </div>
             </header>
             <p class="card-text post-card-description">{{excerpt}}</p>
-            <i class="text-danger"><b>Read More &nbsp;&nbsp;  <span class="fa-solid fa-arrow-right-long" /></b></a></b></i>
+            <i class="text-danger"><b>Read More &rarr;</b></a></b></i>
           </a>
           {{!-- <footer class="post-card-meta mt-2 text-right">
             <div class="post-card-byline-content">
@@ -47,8 +47,8 @@ which templates loop over to generate a list of posts. --}}
   </article>
 
 {{!--
-<a class="featured-link" href="{{url}}#/portal">
-<a class="featured-post-card-content-link" href="{{url}}#/portal">
+<a class="featured-link" href="{{url}}">
+<a class="featured-post-card-content-link" href="{{url}}">
   <article class="featured-post-card {{post_class}} {{#is "home"}}{{#if feature_image}}{{#has index="0"}}post-card-large{{/has}}{{/if}}{{/is}}">
 
     {{#if feature_image}}
@@ -77,7 +77,7 @@ which templates loop over to generate a list of posts. --}}
                 <h2 class="featured-post-card-title">{{title}}</h2>
             </header>
             <section class="post-card-excerpt">
-                <p class="featured-post-card-excerpt-p">{{excerpt}}</p><br /><br /><a href="{{url}}#/portal" class="post-card-read-more"> Read More..</a>
+                <p class="featured-post-card-excerpt-p">{{excerpt}}</p><br /><br /><a href="{{url}}" class="post-card-read-more"> Read More..</a>
             </section>
 
         <footer class="post-card-meta">

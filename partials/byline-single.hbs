@@ -1,14 +1,14 @@
 {{!-- Everything inside the #author tags pulls data from the author --}}
 {{#primary_author}}
 
-<section class="author-card justify-content-center-md">
+<section class="d-flex justify-content-center justify-content-md-start">
     {{#if profile_image}}
         <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
     {{else}}
         <span class="avatar-wrapper">{{> "icons/avatar"}}</span>
     {{/if}}
-    <section class="author-card-content">
-        <h4 class="author-card-name"><p>{{name}}</p></h4>
+    <section class="ms-2">
+        <h4 class="author-card-name"><p class="mb-0">{{name}}</p></h4>
         <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
     </section>
 </section>
