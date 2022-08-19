@@ -3,7 +3,7 @@
 
 {{!-- The big featured header, it uses blog cover image as a BG if available --}}
 {{#tag}}
-<header class="site-header outer mt-5 {{#if feature_image}} style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
+<header class="site-header outer mt-5 {{#if cover_image}}{{else}}no-cover{{/if}}" {{#if cover_image}} style="background-image: url({{cover_image}}){{else}}no-cover{{/if}}">
     <div class="inner">
         <div class="site-header-content">
             <h1 class="site-title text-capitalize">{{name}}</h1>
