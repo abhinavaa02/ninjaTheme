@@ -108,12 +108,12 @@ into the {body} of the default.hbs template --}}
 
             {{!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs --}}
             {{#next_post}}
-                <div class="col-lg-4 col-md-6 offset-md-0 col-12 mt-md-2 mb-md-3">{{> "post-card"}}</div>
+                <div class="col-lg-4 col-md-6 offset-md-0 col-12">{{> "post-card"}}</div>
             {{/next_post}}
 
             {{!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs --}}
             {{#prev_post}}
-                <div class="col-lg-4 col-md-6 offset-md-0 col-12 mt-md-2 mb-md-3">{{> "post-card"}}</div>
+                <div class="col-lg-4 col-md-6 offset-md-0 col-12">{{> "post-card"}}</div>
             {{/prev_post}}
 
         </div>
