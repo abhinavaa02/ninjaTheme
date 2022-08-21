@@ -1,20 +1,22 @@
 <nav class="navbar navbar-expand-md bg-dark">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="col-md-2">
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-              data-target="#dropdown" aria-controls="dropdown" aria-expanded="false"
-              aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand text-white ms-4" id="logo1" href="{{@site.url}}">
-             <img src="{{@site.logo}}" class="rounded navbar-logo" />&nbsp;&nbsp;{{@site.title}}
-        </a>
-      </div>
-      <div class="col-md-10">
-        <div class="collapse navbar-collapse" id="dropdown">
-          {{#if @blog.navigation}}
-              {{navigation}}
-          {{/if}}
-        </div>
-      </div>
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="col-md-2">
+    <button class="navbar-toggler ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand text-white ms-4" id="logo1" href="{{@site.url}}">
+      <img src="{{@site.logo}}" class="rounded navbar-logo" />&nbsp;&nbsp;{{@site.title}}
+    </a>
+  </div>
+  <div class="col-md-10">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="btn text-decoration-none text-light mt-2 mt-lg-0 w-100" href="/">Home</a></li>
+        <li class="nav-item"><a class="btn text-decoration-none text-light mt-2 mt-lg-0 w-100" href="/about/">About</a></li>
+        <li class="nav-item"><a class="btn text-decoration-none text-light mt-2 mt-lg-0 w-100" href="/contact/">Contact</a></li>
+        ...
+      </ul>
+    </div>
+  </div>
 </nav>

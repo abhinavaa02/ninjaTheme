@@ -6,20 +6,13 @@ into the {body} of the default.hbs template --}}
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 
-<main id="site-main" class="site-main outer">
+<main id="site-main" class="site-main">
     <div class="inner">
 
-        <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}} px-md-5">
+        <article class="post-full {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
 
-            <header class="post-full-header row">
-                <h1 class="post-full-title text-center text-md-left col-12">{{title}}</h1>
-                <div class="col-12 col-md-6">{{> "byline-single"}}</div>
-                <div class="sharethis-inline-share-buttons col-12 col-md-6 mt-3 my-md-auto"></div>
-            </header>
-
-            <section class="post-full-content mx-md-4 mx-3 text-justify">
-                {{#if feature_image}}
-          <img class="post_feature_image card-img-top post-full-image shadow"
+        {{#if feature_image}}
+          <img class="post_feature_image card-img-top post-full-image h-auto w-100 shadow"
               srcset="{{img_url feature_image size="s"}} 300w,
                       {{img_url feature_image size="m"}} 600w,
                       {{img_url feature_image size="l"}} 1000w,
@@ -30,11 +23,20 @@ into the {body} of the default.hbs template --}}
               loading="lazy"
           />
         {{/if}}
+
+            <header class="post-full-header row">
+                <h1 class="post-full-title px-0 text-center text-md-left col-12">{{title}}</h1>
+                <div class="col-12 col-md-6">{{> "byline-single"}}</div>
+                <div class="sharethis-inline-share-buttons col-12 col-md-6 mt-3 my-md-auto"></div>
+            </header>
+            <hr class="mx-5 mb-3 mb-md-5">
+
+            <section class="post-full-content mx-md-4 mx-3 text-justify">
                 <div class="post-content">
                   {{content}}
                 </div>
             </section>
-            <section class="post-full-comments">
+            <section class="post-full-comments px-3 px-md-4">
               <div id="disqus_thread"></div>
                 <script>
                   var disqus_config = function () {
@@ -106,14 +108,14 @@ into the {body} of the default.hbs template --}}
             {{/get}}
             {{/if}}
 
-            {{!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs --}}
+            {{!-- If there's a next post, display it using the same markup included from - partials/work.hbs --}}
             {{#next_post}}
-                <div class="col-lg-4 col-md-6 offset-md-0 col-12">{{> "post-card"}}</div>
+                <div class="col-lg-4 col-md-6 offset-md-0 col-12">{{> "work"}}</div>
             {{/next_post}}
 
-            {{!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs --}}
+            {{!-- If there's a previous post, display it using the same markup included from - partials/work.hbs --}}
             {{#prev_post}}
-                <div class="col-lg-4 col-md-6 offset-md-0 col-12">{{> "post-card"}}</div>
+                <div class="col-lg-4 col-md-6 offset-md-0 col-12">{{> "work"}}</div>
             {{/prev_post}}
 
         </div>
