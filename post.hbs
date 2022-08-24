@@ -26,8 +26,27 @@ into the {body} of the default.hbs template --}}
 
             <header class="post-full-header row">
                 <h1 class="post-full-title px-0 text-center text-md-left col-12">{{title}}</h1>
-                <div class="col-12 col-md-6">{{> "byline-single"}}</div>
-                <div class="sharethis-inline-share-buttons col-12 col-md-6 mt-3 my-md-auto"></div>
+        <span>
+            {{#primary_author}}
+            <div class="d-flex justify-content-center">
+                {{#if profile_image}}
+                    <img src="{{img_url profile_image}}" class="rounded-circle author-profile-image me-1 my-auto" alt="{{name}}'s Picture" />
+                {{else}}
+                    <img src="https://icons.getbootstrap.com/assets/icons/person-circle.svg" class="rounded-circle author-profile-image me-1 my-auto" alt="{{name}}'s Picture" />
+                {{/if}}
+                <div class="font-familt-amiri fs-4">
+                    <a class="text-underline-hover text-danger" href="{{url}}">
+                        <b>{{name}}</b>
+                    </a>
+                     &bull;
+                    <time class="byline-meta-date font-familt-amiri my-auto" datetime="{{date format=" YYYY-MM-DD"}}">
+                        <small><small>{{date}}</small></small>
+                    </time>
+                </div>
+            </div>
+            {{/primary_author}}
+        </span>
+        <div class="d-flex justify-content-center my-2 sharethis-inline-share-buttons"></div>
             </header>
             <hr class="mx-5 mb-3 mb-md-5">
 
@@ -36,6 +55,7 @@ into the {body} of the default.hbs template --}}
                   {{content}}
                 </div>
             </section>
+        <div class="d-flex justify-content-center my-4 sharethis-inline-share-buttons"></div>
             <section class="post-full-comments px-3 px-md-4">
               <div id="disqus_thread"></div>
                 <script>
