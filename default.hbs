@@ -33,10 +33,13 @@
         {{{body}}}
 
         {{!-- The footer at the very bottom of the screen --}}
-        <footer class="site-footer outer bg-dark pt-2 pb-4 ps-2 pe-0 pe-md-2" id="footer">
+        <footer class="site-footer outer bg-dark pt-2 pb-4 ps-2 pe-0 pe-md-2 mt-auto mb-0" id="footer">
               <div class="site-footer-content inner d-flex">
-                  <section class="copyright text-light fs-1rem col-6">
+                <section class="copyright text-light fs-1rem col-6">
                     <a href="{{@site.url}}" class="custom-text-decoration text-light">{{@site.title}}</a><small> &copy; {{date format="YYYY"}}</small>
+                <section name="footer-nav" class="footer-nav">
+                    {{navigation type="secondary"}}
+                </section>
                 </section>
                   <nav class="site-footer-nav footer-text-color pe-md-2 mt-2 ms-auto justify-content-end col-6 d-flex">
                       <a href="#" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
