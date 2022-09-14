@@ -1,7 +1,7 @@
 @import "var.less";
 
 //  Index:
-// 1.utilities 2. Body 3.Navbar 4.Home-page 5.Post-cards 6.Footer 7.Page-About 8.Page-Insights 9.Post-page
+// 1.utilities 2. Body 3.Navbar 4.Home-page 5.Post-cards 6.Footer 7.Page-About and Privacy and terms 8.Page-Insights 9.Post-page
 
 //1.Utilities
 .d-flex {
@@ -124,7 +124,7 @@ img#poster {
         color: @light;
     }
 }
-// 7.Page-about
+// 7.Page-about and Privacy and terms
 .post.tag-about {
     margin-right: 1rem!important;
     margin-left: 1rem!important;
@@ -136,6 +136,38 @@ img#poster {
     font-weight: bold;
     font-size: 2.2rem;
     margin-top: 40px;
+    }
+}.tag-privacyandterms {
+    // For all displays
+    & .post-full-content{
+        font-size: 1rem;
+        padding-left: 5rem;
+    }
+    & .post-full-header{
+        padding-left: 5rem;
+        margin-left: 0;
+    }
+
+    // Mobile view
+    @media (max-width:768px) {
+        & .post-full-header{
+            padding-left: 0;
+            & .post-full-title{
+                font-size: 1.6rem;
+            }
+        }
+        & .post-full-content{
+            padding-left: 0;
+        }
+    }
+
+    // Larger displays
+    @media (min-width:1440px) {
+        & .post-full-header{
+        & .post-full-title{
+            font-size: 2.6rem;
+        }
+    }
     }
 }
 // 8. Page-Insights
@@ -173,6 +205,7 @@ img#poster {
     width: 1.5rem;
     height: 1.5rem;
 }.post-full-content {
+    .text-justify;
     position: relative;
     margin: 0 auto;
     @media (min-width: 768px) {
