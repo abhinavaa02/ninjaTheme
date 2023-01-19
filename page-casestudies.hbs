@@ -3,7 +3,7 @@
 into the {body} of the default.hbs template --}}
 
 {{!-- Everything inside the #post tags pulls data from the post --}}
-{{#post}}
+{{!-- {{#post}}
 
 <main id="site-main" class="site-main outer">
     <div class="inner">
@@ -30,7 +30,24 @@ into the {body} of the default.hbs template --}}
     </div>
 </main>
 
-{{/post}}
+{{/post}} --}}
+{{!-- CaseStudies page Featured post Section --}}
+{{!-- This Showes the latest featured post --}}
+<div style="margin-top:50px"></div>
+    <div class="mx-4">
+        <aside class="read-more-wrap mb-5">
+            <div class="inner">
+                {{#get "posts" filter="featured:true+tags:clients" include="authors" limit="1" as |more_posts| }}
+                  {{featured}}
+                    {{#if more_posts}}
+                        {{#foreach more_posts}}
+                            {{> "featured-post-card"}}
+                        {{/foreach}}
+                    {{/if}}
+                {{/get}}
+            </div>
+        </aside>
+{{!-- //Featured post Section --}}
 
 <div class="row px-3 px-md-5">
     {{!-- {{#get "posts"  limit="9" as |related_posts|}} --}}
