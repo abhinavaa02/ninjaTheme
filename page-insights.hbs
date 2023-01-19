@@ -23,17 +23,17 @@
         <aside class="read-more-wrap">
             <div class="inner">
                 <div class="row">
-                    {{#get "posts" include="authors" filter="featured:false" limit="9" as |more_posts| }}
+                    {{!-- {{#get "posts" include="authors" filter="featured:false" limit="9" as |more_posts| }} --}}
 
-                        {{#if more_posts}}
-                            {{#foreach more_posts}}
+                        {{!-- {{#if more_posts}} --}}
+                            {{#foreach posts}}
                                 <div class="col-lg-4 col-md-6 offset-md-0 col-12 mt-2 mb-3">
                                     {{> "insights-post-card"}}
                                 </div>
                             {{/foreach}}
                             {{pagination}}
-                        {{/if}}
-                    {{/get}}
+                        {{!-- {{/if}} --}}
+                    {{!-- {{/get}} --}}
                 </div>
             </div>
         </aside>

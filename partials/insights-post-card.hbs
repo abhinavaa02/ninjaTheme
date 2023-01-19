@@ -23,34 +23,15 @@ which templates loop over to generate a list of posts. --}}
             <header class="post-card-header text-start">
                 <h5 class="card-title"><b>{{title}}</b></h5>
             </header>
-            {{#if primary_tag}}
+            {{!-- {{#if primary_tag}}
                 {{#primary_tag}}
                 <div class="post-card-primary-tag">{{name}}</div>
                 {{/primary_tag}}
-            {{/if}}
+            {{/if}} --}}
             <a href={{url}} class="text-danger text-decoration-none"><b>Read More &rarr;<span class="fa-solid fa-arrow-right-long" /></b></a>
         </a>
     </div>
 </article>
 
 
-
-
-
-{{!-- <article class="post-card {{post_class}}{{#unless feature_image}} no-image{{/unless}}">
-    {{#if feature_image}}
-        <a class="post-card-image-link" href="{{url}}">
-            <div class="post-card-image" style="background-image: url({{feature_image}})"></div>
-        </a>
-    {{/if}}
-    <div class="post-card-content">
-        <a class="post-card-content-link" href="{{url}}">
-            <header class="post-card-header">
-                <h3 class="post-card-title">{{title}}</h3>
-                <button class="btn btn-outline-light" role="button"
-                  tabIndex="-1" aria-disabled="false">Read More</button>
-            </header>
-        </a>
-    </div>
-</article> --}}
 

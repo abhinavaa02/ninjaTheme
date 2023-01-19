@@ -1,0 +1,9 @@
+<nav class="pagination justify-content-center my-4" role="navigation">
+    {{#if prev}}
+        <a class="newer-posts me-3 btn btn-dark" href="{{page_url prev}}">&larr; Prev</a>
+    {{/if}}
+    <span class="page-number my-auto fw-bold fs-5">Page {{page}} of {{pages}}</span>
+    {{#if next}}
+        <a class="older-posts ms-3 btn btn-dark" href="{{page_url next}}">Next &rarr;</a>
+    {{/if}}
+</nav>

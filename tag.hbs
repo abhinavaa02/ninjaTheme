@@ -7,13 +7,13 @@
     <div class="inner">
         <div class="site-header-content">
             <h1 class="site-title text-capitalize">{{name}}</h1>
-            <h2 class="site-description">
+            <p class="site-description">
                 {{#if description}}
                     {{description}}
                 {{else}}
-                    A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
+                   <span class="bull">&bull;</span> A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
                 {{/if}}
-            </h2>
+            </p>
         </div>
     </div>
 </header>
