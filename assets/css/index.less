@@ -43,7 +43,7 @@
 
 // 2.Body
 body {
-    background: radial-gradient(circle, #fffdd0 0, #fff 50%, #fffdd0 100%);
+    // background: radial-gradient(circle, #fffdd0 0, #fff 50%, #fffdd0 100%);
 }
 // 3. Navbar
 .navbar-logo {
@@ -150,6 +150,9 @@ img#poster {
 
     // Mobile view
     @media (max-width:768px) {
+        iframe.video-embed{
+            height: 120%;
+        }
         & .post-full-header{
             padding-left: 0;
             & .post-full-title{
@@ -340,4 +343,12 @@ img#poster {
 }.mx-4 footer{
     margin-right: -1.5rem !important;
     margin-left: -1.5rem !important;
+}.jumbotron{
+    height: calc(100vh - 76px) !important;
+}.bg-pink{
+    background: pink;
+}.bg-grey{
+    background: gray;
+}.sizing{
+    height: 80px;width: 80px;
 }
