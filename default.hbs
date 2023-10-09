@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{@site.locale}}">
+
 <head>
 
     {{!-- Document Settings --}}
@@ -12,19 +13,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Mobile Development, App Development, Technology, Outsourcing, CTO Services">
 
-    {{!-- Styles'n'Scripts --}}<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    {{!-- Styles'n'Scripts --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link rel="icon" href={{asset "img/favicon.ico"}} type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="{{asset "built/index.css"}}" />
-    {{!-- <link rel="stylesheet" type="text/css" href="{{asset "built/style.css"}}" /> --}}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="icon" href={{asset "img/favicon.ico" }} type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{{asset " built/index.css"}}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    {{!--
+    <link rel="stylesheet" type="text/css" href="{{asset " built/style.css"}}" /> --}}
 
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
 </head>
+
 <body class="{{body_class}}">
 
     <div class="site-wrapper">
@@ -34,26 +41,30 @@
 
         {{!-- The footer at the very bottom of the screen --}}
         <footer class="site-footer outer bg-dark pt-2 pb-4 ps-2 pe-0 pe-md-2 mt-auto mb-0" id="footer">
-              <div class="site-footer-content inner d-flex px-4">
+            <div class="site-footer-content inner d-flex px-4">
                 <section class="copyright text-light fs-1rem col-6">
-                    <a href="{{@site.url}}" class="custom-text-decoration text-light">{{@site.title}}</a><small> &copy; {{date format="YYYY"}}</small>
-                <section name="footer-nav" class="footer-nav">
-                    {{navigation type="secondary"}}
+                    <a href="{{@site.url}}" class="custom-text-decoration text-light">{{@site.title}}</a><small> &copy;
+                        {{date format="YYYY"}}</small>
+                    <section name="footer-nav" class="footer-nav">
+                        {{navigation type="secondary"}}
+                    </section>
                 </section>
-                </section>
-                  <nav class="site-footer-nav footer-text-color pe-md-2 mt-2 ms-auto justify-content-end col-6 d-flex">
-                      <a href="https://www.facebook.com/abhijeet.nbd" target="_blank" rel="noopener"><i class="fab fa-facebook"></i></a>
-                      <a href="https://twitter.com/aninjamonk/" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
-                      <a href="https://www.github.com/aNinjaMonk/"><i class="fab fa-github"></i></a>
-                      <a href="mailto:ninjamonk@protonmail.com"><i class="fas fa-envelope-open-text"></i></a>
-                      <a href="tel:+917456883325"><small><i class="fas fa-phone"></i></small></a>
-                      {{!-- {{#if @labs.subscribers}}
-                          <a class="subscribe-button" href="#subscribe">RSS</a>
-                      {{else}}
-                          <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
-                      {{/if}} --}}
-                  </nav>
-              </div>
+                <nav class="site-footer-nav footer-text-color pe-md-2 mt-2 ms-auto justify-content-end col-6 d-flex">
+                    <a href="https://www.facebook.com/abhijeet.nbd" target="_blank" rel="noopener"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/aninjamonk/" target="_blank" rel="noopener"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.github.com/aNinjaMonk/"><i class="fab fa-github"></i></a>
+                    <a href="mailto:ninjamonk@protonmail.com"><i class="fas fa-envelope-open-text"></i></a>
+                    <a href="tel:+917456883325"><small><i class="fas fa-phone"></i></small></a>
+                    {{!-- {{#if @labs.subscribers}}
+                    <a class="subscribe-button" href="#subscribe">RSS</a>
+                    {{else}}
+                    <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/"
+                        target="_blank" rel="noopener">{{> "icons/rss"}}</a>
+                    {{/if}} --}}
+                </nav>
+            </div>
         </footer>
     </div>
 
@@ -63,51 +74,58 @@
         <a class="subscribe-overlay-close" href="#"></a>
         <div class="subscribe-overlay-content">
             {{#if @blog.logo}}
-                <img class="subscribe-overlay-logo" src="{{@site.logo}}" alt="{{@site.title}}" />
+            <img class="subscribe-overlay-logo" src="{{@site.logo}}" alt="{{@site.title}}" />
             {{/if}}
             <h1 class="subscribe-overlay-title">Subscribe to {{@site.title}}</h1>
-            <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
+            <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered
+                straight to your inbox</p>
             {{subscribe_form placeholder="youremail@example.com"}}
         </div>
     </div>
     {{/if}}
 
     {{!-- jQuery + Fitvids, which makes all video embeds responsive --}}
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script>
-      $(".navbar-nav li.trigger-collapse a").click(function(event) {
-        $(".navbar-collapse").collapse('hide');
-      });
-      //jquery auto height
-      jQuery.fn.autoHeight = function(options) {
-          var opt = $.extend( {}, options );
-          return this.each(function() {
-      		var ele = $(this);
-              function setHeight(){
-              	var windowHeight = $(window).height();
-      	        ele.css({"height" : windowHeight});
-              }
-          	setHeight();
-          	$(window).resize(function() {
-      	    	setHeight();
-      		});
-          });
-      };
+        $(".navbar-nav li.trigger-collapse a").click(function (event) {
+            $(".navbar-collapse").collapse('hide');
+        });
+        //jquery auto height
+        jQuery.fn.autoHeight = function (options) {
+            var opt = $.extend({}, options);
+            return this.each(function () {
+                var ele = $(this);
+                function setHeight() {
+                    var windowHeight = $(window).height();
+                    ele.css({ "height": windowHeight });
+                }
+                setHeight();
+                $(window).resize(function () {
+                    setHeight();
+                });
+            });
+        };
 
-      $(function() {
-      	$(".autoHeight").autoHeight();
-      });
-      var images = document.querySelectorAll('.kg-gallery-image img');
-      images.forEach(function (image) {
-          var container = image.closest('.kg-gallery-image');
-          var width = image.attributes.width.value;
-          var height = image.attributes.height.value;
-          var ratio = width / height;
-          container.style.flex = ratio + ' 1 0%';
-      });
+        $(function () {
+            $(".autoHeight").autoHeight();
+        });
+        var images = document.querySelectorAll('.kg-gallery-image img');
+        images.forEach(function (image) {
+            var container = image.closest('.kg-gallery-image');
+            var width = image.attributes.width.value;
+            var height = image.attributes.height.value;
+            var ratio = width / height;
+            container.style.flex = ratio + ' 1 0%';
+        });
     </script>
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset " js/jquery.fitvids.js"}}"></script>
     {{#if pagination.pages}}
     <script>
         // maxPages is a global variable that is needed to determine
@@ -115,14 +133,18 @@
         // we reached the last page already.
         var maxPages = parseInt('{{pagination.pages}}');
     </script>
-    <script src="{{asset "js/infinitescroll.js"}}"></script>
+    <script src="{{asset " js/infinitescroll.js"}}"></script>
     {{/if}}
 
-    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
+    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some
+    JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already
+    loaded. --}}
     {{{block "scripts"}}}
 
-    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the
+    closing body tag --}}
     {{ghost_foot}}
 
 </body>
+
 </html>
