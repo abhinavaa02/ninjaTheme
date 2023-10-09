@@ -79,13 +79,15 @@ function css(done){
   function zipper(done){
     const filename = require('./package.json').name + '.zip';
     src([
-        '**',
-        '!node_modules', '!node_modules/**',
-        '!dist', '!dist/**',
-        '!yarn.lock',
-        '!gulpfile.js',
-        '!assets/css/**',
-        '!assets/js/**',
+      '**',
+      '!node_modules', '!node_modules/**',
+      '!dist', '!dist/**',
+      '!yarn-error.log',
+      '!yarn.lock',
+      '!gulpfile.js',
+      '!assets/css/*.less',
+      '!assets/js/**',
+      '!assets/plugins/**'
     ])
     .pipe(zip(filename))
     .pipe(dest('dist/'))
