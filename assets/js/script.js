@@ -38,3 +38,19 @@ function doThis(temp, url) {
     contentDiv.innerText = content;
     urlDiv.href = url;
 }
+
+function scrollToLeft() {
+    const element = document.getElementById("startups-cards");
+    const position = element.scrollLeft;
+    const screenWidth = window.screen.width;
+    // if (position < screenWidth*0.66) {}
+    element.scroll({left:position-screenWidth*0.66});
+}
+
+function scrollToRight() {
+    const element = document.getElementById("startups-cards");
+    const position = element.scrollLeft;
+    const screenWidth = window.screen.width;
+    // if (position < screenWidth*0.66) {}
+    element.scroll({left:position+screenWidth*0.66});
+}

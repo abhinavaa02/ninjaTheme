@@ -47,8 +47,11 @@
 
   <div id="startups" class="py-3 fs-1 text-dark text-center bg-pink fw-bold">Startups I have been part of</div>
 
-  <section class="py-3 row bg-grey overflow-x-auto">
-    <div class="d-flex">
+  <section class="py-3 bg-grey d-flex">
+    <div class="cards-control-prev fs-1 d-flex" role="button" onclick="scrollToLeft()">
+      <span class="bi bi-chevron-left my-auto" aria-hidden="true" title="Previous"></span>
+    </div>
+    <div class="d-flex overflow-x-auto" id="startups-cards">
       {{#get "posts" filter="tags:clients" as |filtered_posts|}}
       {{#foreach filtered_posts}}
       <div class="home-post-card col-4">
@@ -58,9 +61,12 @@
       {{/foreach}}
       {{/get}}
     </div>
+    <div class="cards-control-next fs-1 d-flex" role="button" onclick="scrollToRight()">
+      <span class="bi bi-chevron-right my-auto" aria-hidden="true" title="Next"></span>
+    </div>
   </section>
 
-<script src="{{asset "js/script.js"}}"></script>
+  <script src="{{asset "js/script.js"}}"></script>
 
   <div class="p-4">
     <div class="fs-4 lh-sm text-justify" id="home-post-content">
