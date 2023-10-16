@@ -79,7 +79,7 @@ img#poster {
 .post-card {
     overflow: hidden;
     margin: 0 20px 20px;
-    height: 400px;
+    // height: 400px;
     background: hsla(0, 0%, 100%, .1) 50%;
     background-size: cover;
     border-radius: 10px;
@@ -361,4 +361,12 @@ img#poster {
     height: 70% !important;
 }.h-30{
     height: 30% !important;
+}.post-card-img{
+    &:hover {
+        scale: 1.02;
+    }
+}.selected-post{
+    // border: 20px solid lime;
+}.card-grey{
+    filter: grayscale(1);
 }

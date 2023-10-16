@@ -1,0 +1,19 @@
+{{!-- This is a partial file used to generate a post "card"
+which templates loop over to generate a list of posts. --}}
+
+<article class="post-card {{post_class}}{{#unless feature_image}} no-image{{/unless}} bg-transparent card-grey" id="home-postcard-{{@index}}">
+    {{#if feature_image}}
+    <a class="post-card-image-link" href="#home-post-content" onclick="doThis({{@index}}, {{url}})">
+        <img class="home-post-card-image post-card-img" src="{{feature_image}}"></img>
+    </a>
+    {{/if}}
+    <div class="post-card-content pt-1 text-light">
+        <h3 class="post-card-title text-center overflow-hidden h2 mx-md-3 mx-1 mt-2">{{title}}</h3>
+    </div>
+    <div class="d-none" id="{{@index}}-post-content">
+        {{content}}
+    </div>
+    <div class="d-none" id="{{@index}}-post-url">
+        {{url}}
+    </div>
+</article>

@@ -71,6 +71,7 @@ function css(done){
       watch("./assets/css/*.less").on("change", reload);
       watch("./assets/built/*.css").on("change", reload);
       watch("./assets/built/*.js").on("change", reload);
+      watch("./assets/js/*.js").on("change", reload);
       watch("./partials/*.hbs").on("change", reload);
       watch("*.hbs").on("change", reload);
     done();
