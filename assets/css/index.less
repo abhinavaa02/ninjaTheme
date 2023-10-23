@@ -379,4 +379,17 @@ img#poster {
     scroll-behavior: smooth;
 }#startups-cards::-webkit-scrollbar {
     display: none;
+}.text-bg-grey{
+    background-color: rgba(120, 120, 120, .7);
+    &::placeholder {
+      color: var(--bs-dark-rgb);
+      opacity: 1; /* Firefox */
+    }
+    &::-ms-input-placeholder { /* Edge 12-18 */
+      color: var(--bs-dark-rgb);
+    }
+}.h-200px{
+    height: 200px;
+}.bg-grey{
+    background-color: rgba(120, 120, 120, .7);
 }
